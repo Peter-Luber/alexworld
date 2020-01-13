@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import "./App.css";
 import a01 from "./128k/1.mp3";
@@ -74,11 +73,6 @@ class App extends React.Component {
             <span className="navButtons">ABOUT</span>
             <span id="foot">
               POWERED BY <a href="http://peter.technology/">SVENGALI</a>
-              <br></br>
-              <br></br>
-              P.S. TRY TYPING ON YOUR
-              <br></br>
-              KEYBOARD FOR A SURPRISE!
             </span>
           </div>
           <div id="rightBox">

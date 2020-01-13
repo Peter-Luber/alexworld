@@ -46,14 +46,14 @@ a:focus {
   height: 15vh;
   font-size: 8vh;
   font-family: "EurostileBlack";
-  color: rgba(32, 32, 32, 0.555);
+  color: rgba(126, 125, 125, 0.555);
   border-radius: 15vh;
-  filter: blur(0.15vh);
+  filter: blur(0.12vh);
 }
 
 #headerSpan:hover {
-  color: rgb(54, 54, 54);
-  filter: blur(0.4vh);
+  color: rgba(54, 54, 54, 0.233);
+  filter: blur(0.22vh);
 }
 
 #bigBox {
@@ -73,11 +73,11 @@ a:focus {
   padding: 1vh;
   line-height: 5.5vh;
   vertical-align: top;
-  filter: drop-shadow(0vh 0vh 3vh #c7c7c7);
+  filter: drop-shadow(0vh 0vh 3vh #d6d6d67a);
 }
 
 .navButtons {
-  filter: blur(0.17vh);
+  filter: blur(0.09vh);
   text-indent: 0;
 }
 
@@ -97,11 +97,11 @@ a:focus {
   margin-top: -58vh;
   font-size: 10vh;
   text-align: center;
-  filter: blur(0.3vh) drop-shadow(0vh 0vh 3vh #c7c7c7);
+  filter: blur(0.2vh) drop-shadow(0vh 0vh 3vh #d6d6d67a);
 }
 
 #rightContent:hover {
-  filter: blur(0.5vh);
+  filter: blur(0.4vh);
 }
 
 #foot {
