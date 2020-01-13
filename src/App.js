@@ -87,15 +87,6 @@ class App extends React.Component {
     );
   }
 
-  /* toggleDiv = () => {
-    console.log(this.render.visStyle)
-    if (this.render.visStyle === "hidden") {
-      this.render.visStyle = "visible";
-    } else if (this.render.visStyle === "visible") {
-      this.render.visStyle = "hidden";
-    }
-  } */
-
   h1 = new Audio(a01);
   h2 = new Audio(a02);
   h3 = new Audio(a03);
