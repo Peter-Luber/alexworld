@@ -12,6 +12,7 @@
 
 a {
   color: rgba(87, 88, 87, 0.808);
+  cursor: crosshair;
 }
 
 a:hover,
