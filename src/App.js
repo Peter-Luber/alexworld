@@ -45,47 +45,52 @@ class App extends React.Component {
       >
         <header className="App-header">
           <span id="headerSpan">
-            A.T. <br></br> AUDIO
+            a.t. <br></br> audio
           </span>
         </header>
         <div id="bigBox">
           <div id="leftBox">
-            <span className="navButtons">
-              HOME
-              <br></br>
-              <br></br>
-            </span>
-            <span className="navButtons">
-              WORKS
-              <br></br>
-              <br></br>
-            </span>
-            <span className="navButtons">
-              CONTACT
-              <br></br>
-              <br></br>
-            </span>
-            <span className="navButtons">
-              RESOURCES
-              <br></br>
-              <br></br>
-            </span>
-            <span className="navButtons">ABOUT</span>
-            <span id="foot">
-              POWERED BY <a href="http://peter.technology/">SVENGALI</a>
-            </span>
+            <div id="leftInner">
+              <button className="navButtons" onClick={this.click}>
+                home
+              </button>
+              <button className="navButtons" onClick={this.click}>
+                works
+              </button>
+              <button className="navButtons" onClick={this.click}>
+                contact
+              </button>
+              <button className="navButtons" onClick={this.click}>
+                resources
+              </button>
+              <button className="navButtons" onClick={this.click}>
+                about
+              </button>
+            </div>
           </div>
           <div id="rightBox">
             <span id="rightContent">
+              {this.clicked}
               <br></br>
               <br></br>
-              CONTENT
+              content
             </span>
+          </div>
+          <div id="foot">
+            powered by <a href="http://peter.technology/">svengali</a>
           </div>
         </div>
       </div>
     );
   }
+
+  clicked = () => {
+    return;
+  };
+
+  click = () => {
+    console.log(this);
+  };
 
   h1 = new Audio(a01);
   h2 = new Audio(a02);
