@@ -48,50 +48,21 @@ class App extends React.Component {
             a.t. <br></br> audio
           </span>
         </header>
-        <div id="bigBox">
-          <div id="leftBox">
-            <div id="leftInner">
-              <button className="navButtons" onClick={this.click}>
-                home
-              </button>
-              <button className="navButtons" onClick={this.click}>
-                works
-              </button>
-              <button className="navButtons" onClick={this.click}>
-                contact
-              </button>
-              <button className="navButtons" onClick={this.click}>
-                resources
-              </button>
-              <button className="navButtons" onClick={this.click}>
-                about
-              </button>
-            </div>
-          </div>
-          <div id="rightBox">
-            <span id="rightContent">
-              {this.clicked}
-              <br></br>
-              <br></br>
-              content
-            </span>
-          </div>
-          <div id="foot">
-            powered by <a href="http://peter.technology/">svengali</a>
-          </div>
+        <NavBar />
+        <div id="contentBox">
+          <Content id="Content">
+            {this.clicked}
+            <br></br>
+            <br></br>
+            content
+          </Content>
+        </div>
+        <div id="foot">
+          powered by <a href="http://peter.technology/">svengali</a>
         </div>
       </div>
     );
   }
-
-  clicked = () => {
-    return;
-  };
-
-  click = () => {
-    console.log(this);
-  };
-
   h1 = new Audio(a01);
   h2 = new Audio(a02);
   h3 = new Audio(a03);
@@ -195,6 +166,82 @@ class App extends React.Component {
       this.h33.play();
     }
   };
+}
+
+class NavBar extends React.Component {
+  render() {
+    return (
+      <div id="NavBar">
+        <span>butt</span>
+        <div id="leftBox">
+          <span>hole</span>
+        </div>
+      </div>
+    );
+  }
+}
+
+class Link extends React.Component {
+  render() {
+    return <button onClick={() => console.log("ok")}>click me</button>;
+  }
+}
+
+class Content extends React.Component {
+  state = {
+    page: "Home"
+  };
+
+  displaySwitch = () => {
+    switch (this.state.page) {
+      case "Home":
+        console.log(this);
+        return <Home changeDisplay={this.changeDisplay} />;
+      case "OtherPage":
+        console.log(`Rendering OtherPage component inside Content component`);
+        return <OtherPage changeDisplay={this.changeDisplay} />;
+      default:
+        console.log("SHIT! State is fucked.");
+    }
+  };
+
+  changeDisplay = newDisplay => {
+    console.log(`Changing page state value to ${newDisplay}`);
+    this.setState({
+      page: newDisplay
+    });
+  };
+
+  render() {
+    return <div className="Content">{this.displaySwitch()}</div>;
+  }
+}
+
+class Home extends React.Component {
+  render(props) {
+    return (
+      <div className="Home">
+        <h2>Alex Thompson</h2>
+        <h3>renaissance man</h3>
+        <button onClick={() => this.props.changeDisplay("OtherPage")}>
+          Lets go to the other page
+        </button>
+      </div>
+    );
+  }
+}
+
+class OtherPage extends React.Component {
+  render(props) {
+    return (
+      <div className="OtherPage">
+        <h2>contact</h2>
+        <button onClick={() => this.props.changeDisplay("Home")}>
+          Back to home
+        </button>
+      </div>
+    );
+  }
 }
 
 export default App;
