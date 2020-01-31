@@ -79,7 +79,7 @@ a:focus {
   font-size: 4vh;
 }
 
-.OtherPage {
+.Contact {
   font-size: 4vh;
 }
 
@@ -101,7 +101,7 @@ a:focus {
   filter: blur(0.25vh);
 }
 
-#contentBox {
+#Content {
   grid-area: 2 / 2 / 4 / 6;
   background-color: rgb(239, 246, 255);
   font-size: 10vh;
@@ -109,7 +109,7 @@ a:focus {
   filter: blur(0.12vh) drop-shadow(0vh 0vh 3vh #d4d4d47a);
 }
 
-#Content:hover {
+#contentBox:hover {
   filter: blur(0.4vh);
 }
 
