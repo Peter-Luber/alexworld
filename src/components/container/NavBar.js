@@ -6,8 +6,11 @@ class NavBar extends React.Component {
     return (
       <div id="NavBar">
         <div id="leftBox">
-          <Link changeDisplay={this.props.changeDisplay} linkName="Home"/>
-          <Link changeDisplay={this.props.changeDisplay} linkName="Contact"/>
+          <Link changeDisplay={this.props.changeDisplay} linkName="home"/>
+          <Link changeDisplay={this.props.changeDisplay} linkName="portfolio"/>
+          <Link changeDisplay={this.props.changeDisplay} linkName="services"/>
+          <Link changeDisplay={this.props.changeDisplay} linkName="contact"/>
+          <Link changeDisplay={this.props.changeDisplay} linkName="extras"/>
         </div>
       </div>
     );
