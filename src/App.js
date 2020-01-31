@@ -34,12 +34,12 @@ import a31 from "./128k/31.mp3";
 import a32 from "./128k/32.mp3";
 import a33 from "./128k/33.mp3";
 
-import NavBar from "./NavBar";
-import Content from "./Content";
-import Header from "./Header";
-import Footer from "./Footer";
-import Home from "./Home";
-import Contact from "./Contact";
+import NavBar from "./components/container/NavBar";
+import Content from "./components/container/Content";
+import Header from "./components/display/Header";
+import Footer from "./components/display/Footer";
+import Home from "./components/display/Home";
+import Contact from "./components/display/Contact";
 
 class App extends React.Component {
   state = {
