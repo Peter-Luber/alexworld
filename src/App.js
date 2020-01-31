@@ -34,162 +34,119 @@ import a31 from "./128k/31.mp3";
 import a32 from "./128k/32.mp3";
 import a33 from "./128k/33.mp3";
 
+import NavBar from "./NavBar";
+import Content from "./Content";
+import Header from "./Header";
+import Footer from "./Footer";
+import Home from "./Home";
+import Contact from "./Contact";
+
 class App extends React.Component {
-  render() {
-    return (
-      <div
-        autoFocus={true}
-        tabIndex="1"
-        className="AppX"
-        onKeyDown={this.keypressApp}
-      >
-        <header className="App-header">
-          <span id="headerSpan">
-            a.t. <br></br> audio
-          </span>
-        </header>
-        <NavBar />
-        <div id="contentBox">
-          <Content id="Content">
-            {this.clicked}
-            <br></br>
-            <br></br>
-            content
-          </Content>
-        </div>
-        <div id="foot">
-          powered by <a href="http://peter.technology/">svengali</a>
-        </div>
-      </div>
-    );
+  state = {
+    h1: new Audio(a01),
+    h2: new Audio(a02),
+    h3: new Audio(a03),
+    h4: new Audio(a04),
+    h5: new Audio(a05),
+    h6: new Audio(a06),
+    h7: new Audio(a07),
+    h8: new Audio(a08),
+    h9: new Audio(a09),
+    h10: new Audio(a10),
+    h11: new Audio(a11),
+    h12: new Audio(a12),
+    h13: new Audio(a13),
+    h14: new Audio(a14),
+    h15: new Audio(a15),
+    h16: new Audio(a16),
+    h17: new Audio(a17),
+    h18: new Audio(a18),
+    h19: new Audio(a19),
+    h20: new Audio(a20),
+    h21: new Audio(a21),
+    h22: new Audio(a22),
+    h23: new Audio(a23),
+    h24: new Audio(a24),
+    h25: new Audio(a25),
+    h26: new Audio(a26),
+    h27: new Audio(a27),
+    h28: new Audio(a28),
+    h29: new Audio(a29),
+    h30: new Audio(a30),
+    h31: new Audio(a31),
+    h32: new Audio(a32),
+    h33: new Audio(a33),
+    page: "Home"
   }
-  h1 = new Audio(a01);
-  h2 = new Audio(a02);
-  h3 = new Audio(a03);
-  h4 = new Audio(a04);
-  h5 = new Audio(a05);
-  h6 = new Audio(a06);
-  h7 = new Audio(a07);
-  h8 = new Audio(a08);
-  h9 = new Audio(a09);
-  h10 = new Audio(a10);
-  h11 = new Audio(a11);
-  h12 = new Audio(a12);
-  h13 = new Audio(a13);
-  h14 = new Audio(a14);
-  h15 = new Audio(a15);
-  h16 = new Audio(a16);
-  h17 = new Audio(a17);
-  h18 = new Audio(a18);
-  h19 = new Audio(a19);
-  h20 = new Audio(a20);
-  h21 = new Audio(a21);
-  h22 = new Audio(a22);
-  h23 = new Audio(a23);
-  h24 = new Audio(a24);
-  h25 = new Audio(a25);
-  h26 = new Audio(a26);
-  h27 = new Audio(a27);
-  h28 = new Audio(a28);
-  h29 = new Audio(a29);
-  h30 = new Audio(a30);
-  h31 = new Audio(a31);
-  h32 = new Audio(a32);
-  h33 = new Audio(a33);
 
   keypressApp = event => {
     if (event.key === "q") {
-      this.h1.play();
+      this.state.h1.play();
     } else if (event.key === "a") {
-      this.h2.play();
+      this.state.h2.play();
     } else if (event.key === "z") {
-      this.h3.play();
+      this.state.h3.play();
     } else if (event.key === "w") {
-      this.h4.play();
+      this.state.h4.play();
     } else if (event.key === "s") {
-      this.h5.play();
+      this.state.h5.play();
     } else if (event.key === "x") {
-      this.h6.play();
+      this.state.h6.play();
     } else if (event.key === "e") {
-      this.h7.play();
+      this.state.h7.play();
     } else if (event.key === "d") {
-      this.h8.play();
+      this.state.h8.play();
     } else if (event.key === "c") {
-      this.h9.play();
+      this.state.h9.play();
     } else if (event.key === "r") {
-      this.h10.play();
+      this.state.h10.play();
     } else if (event.key === "f") {
-      this.h11.play();
+      this.state.h11.play();
     } else if (event.key === "v") {
-      this.h12.play();
+      this.state.h12.play();
     } else if (event.key === "t") {
-      this.h13.play();
+      this.state.h13.play();
     } else if (event.key === "g") {
-      this.h14.play();
+      this.state.h14.play();
     } else if (event.key === "b") {
-      this.h15.play();
+      this.state.h15.play();
     } else if (event.key === "y") {
-      this.h16.play();
+      this.state.h16.play();
     } else if (event.key === "h") {
-      this.h17.play();
+      this.state.h17.play();
     } else if (event.key === "n") {
-      this.h18.play();
+      this.state.h18.play();
     } else if (event.key === "u") {
-      this.h19.play();
+      this.state.h19.play();
     } else if (event.key === "j") {
-      this.h20.play();
+      this.state.h20.play();
     } else if (event.key === "m") {
-      this.h21.play();
+      this.state.h21.play();
     } else if (event.key === "i") {
-      this.h22.play();
+      this.state.h22.play();
     } else if (event.key === "k") {
-      this.h23.play();
+      this.state.h23.play();
     } else if (event.key === ",") {
-      this.h24.play();
+      this.state.h24.play();
     } else if (event.key === "o") {
-      this.h25.play();
+      this.state.h25.play();
     } else if (event.key === "l") {
-      this.h26.play();
+      this.state.h26.play();
     } else if (event.key === ".") {
-      this.h27.play();
+      this.state.h27.play();
     } else if (event.key === "p") {
-      this.h28.play();
+      this.state.h28.play();
     } else if (event.key === ";") {
-      this.h29.play();
+      this.state.h29.play();
     } else if (event.key === "/") {
-      this.h30.play();
+      this.state.h30.play();
     } else if (event.key === "[") {
-      this.h31.play();
+      this.state.h31.play();
     } else if (event.key === "'") {
-      this.h32.play();
+      this.state.h32.play();
     } else if (event.key === "]") {
-      this.h33.play();
+      this.state.h33.play();
     }
-  };
-}
-
-class NavBar extends React.Component {
-  render() {
-    return (
-      <div id="NavBar">
-        <span>butt</span>
-        <div id="leftBox">
-          <span>hole</span>
-        </div>
-      </div>
-    );
-  }
-}
-
-class Link extends React.Component {
-  render() {
-    return <button onClick={() => console.log("ok")}>click me</button>;
-  }
-}
-
-class Content extends React.Component {
-  state = {
-    page: "Home"
   };
 
   displaySwitch = () => {
@@ -197,9 +154,9 @@ class Content extends React.Component {
       case "Home":
         console.log(this);
         return <Home changeDisplay={this.changeDisplay} />;
-      case "OtherPage":
-        console.log(`Rendering OtherPage component inside Content component`);
-        return <OtherPage changeDisplay={this.changeDisplay} />;
+      case "Contact":
+        console.log(`Rendering Contact component inside Content component`);
+        return <Contact changeDisplay={this.changeDisplay} />;
       default:
         console.log("SHIT! State is fucked.");
     }
@@ -213,32 +170,17 @@ class Content extends React.Component {
   };
 
   render() {
-    return <div className="Content">{this.displaySwitch()}</div>;
-  }
-}
-
-class Home extends React.Component {
-  render(props) {
     return (
-      <div className="Home">
-        <h2>Alex Thompson</h2>
-        <h3>renaissance man</h3>
-        <button onClick={() => this.props.changeDisplay("OtherPage")}>
-          Lets go to the other page
-        </button>
-      </div>
-    );
-  }
-}
-
-class OtherPage extends React.Component {
-  render(props) {
-    return (
-      <div className="OtherPage">
-        <h2>contact</h2>
-        <button onClick={() => this.props.changeDisplay("Home")}>
-          Back to home
-        </button>
+      <div
+        autoFocus={true}
+        tabIndex="1"
+        className="AppX"
+        onKeyDown={this.keypressApp}
+      >
+        <Header />
+        <NavBar changeDisplay={this.changeDisplay}/>
+        <Content displaySwitch={this.displaySwitch}/>
+        <Footer />
       </div>
     );
   }
