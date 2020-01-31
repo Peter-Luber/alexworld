@@ -40,6 +40,9 @@ import Header from "./components/display/Header";
 import Footer from "./components/display/Footer";
 import Home from "./components/display/Home";
 import Contact from "./components/display/Contact";
+import Portfolio from "./components/display/Portfolio";
+import Services from "./components/display/Services";
+import Extras from "./components/display/Extras";
 
 class App extends React.Component {
   state = {
@@ -76,8 +79,8 @@ class App extends React.Component {
     h31: new Audio(a31),
     h32: new Audio(a32),
     h33: new Audio(a33),
-    page: "Home"
-  }
+    page: "home"
+  };
 
   keypressApp = event => {
     if (event.key === "q") {
@@ -151,12 +154,18 @@ class App extends React.Component {
 
   displaySwitch = () => {
     switch (this.state.page) {
-      case "Home":
+      case "home":
         console.log(this);
         return <Home changeDisplay={this.changeDisplay} />;
-      case "Contact":
+      case "contact":
         console.log(`Rendering Contact component inside Content component`);
         return <Contact changeDisplay={this.changeDisplay} />;
+      case "portfolio":
+        return <Portfolio changeDisplay={this.changeDisplay} />;
+      case "services":
+        return <Services changeDisplay={this.changeDisplay} />;
+      case "extras":
+        return <Extras changeDisplay={this.changeDisplay} />;
       default:
         console.log("SHIT! State is fucked.");
     }
@@ -178,8 +187,8 @@ class App extends React.Component {
         onKeyDown={this.keypressApp}
       >
         <Header />
-        <NavBar changeDisplay={this.changeDisplay}/>
-        <Content displaySwitch={this.displaySwitch}/>
+        <NavBar changeDisplay={this.changeDisplay} />
+        <Content displaySwitch={this.displaySwitch} />
         <Footer />
       </div>
     );
