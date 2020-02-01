@@ -18,28 +18,31 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: rgb(192, 192, 192);
+  color: rgb(216, 216, 216);
   outline: none;
+  filter: blur(0.2vh);
 }
 
 button {
   background-color: rgb(255, 255, 255);
-  filter: blur(0.09vh);
   text-indent: 0;
   font-family: "Eurostile";
-  font-size: 3.5vh;
+  font-size: 3vh;
   color: rgba(209, 209, 209, 0.808);
   background-color: rgb(239, 246, 255);
   border-style: none;
-  width: 85%; 
+  width: 100%;
   outline: none;
   cursor: crosshair;
+  overflow: visible;
 }
 
-button:hover {
-  color: rgb(223, 223, 223);
+button:hover,
+button:active,
+button:focus {
+  color: rgb(224, 224, 224);
   z-index: 1;
-  filter: blur(0.25vh);
+  filter: blur(0.2vh);
 }
 
 .AppX {
@@ -64,20 +67,29 @@ button:hover {
 
 .App-header {
   margin: auto;
-  text-align: left;
+  width: 100%;
+  height: 100%;
   grid-column: 1/2;
   grid-row: 1/2;
   font-size: 3.5vh;
   font-family: "EurostileBlack";
   color: rgba(206, 206, 206, 0.555);
   border-radius: 15vh;
-  filter: blur(0.12vh);
   line-height: 50%;
+  display: flex;
 }
 
-.App-header:hover {
-  color: rgba(209, 209, 209, 0.233);
-  filter: blur(0.22vh);
+.hBox {
+  margin: auto;
+  text-align: left;
+  outline: none;
+}
+
+.hBox:hover,
+.hBox:active,
+.hBox:focus {
+  color: rgba(212, 212, 212, 0.363);
+  filter: blur(0.2vh);
 }
 
 #NavBar {
@@ -152,7 +164,7 @@ button:hover {
   background-color: rgb(239, 246, 255);
   font-size: 10vh;
   text-align: center;
-  filter: blur(0.12vh) drop-shadow(0vh 0vh 3vh #d4d4d47a);
+  filter: drop-shadow(0vh 0vh 3vh #d4d4d47a);
   margin-left: 2vh;
 }
 
@@ -161,16 +173,27 @@ button:hover {
   height: 100%;
 }
 
+#contentBox:active,
+#contentBox:focus {
+  filter: blur(0.2vh);
+  color: rgba(221, 221, 221, 0.808);
+  outline: none;
+}
+
+h2:hover,
+h2:focus,
+h3:hover,
+h3:focus {
+  filter: blur(0.2vh);
+  color: rgba(221, 221, 221, 0.808);
+  outline: none;
+}
+
 #foot {
   grid-area: 4 / 3 / 4 / 4;
   color: rgba(214, 214, 214, 0.705);
   font-size: 1.9vh;
   text-align: left;
   text-align: center;
-  filter: blur(0.1vh);
   width: 100%;
-}
-
-#foot:hover {
-  filter: blur(0.2vh);
 }

@@ -4,8 +4,11 @@ class Footer extends React.Component {
   render() {
     return (
       <div id="foot">
-        <p>
-          powered by <a href="http://peter.technology/">svengali</a>
+        <p id="footText">
+          powered by{" "}
+          <a href="http://peter.technology/" tabIndex="0">
+            svengali
+          </a>
         </p>
       </div>
     );
