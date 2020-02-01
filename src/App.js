@@ -44,6 +44,28 @@ import Portfolio from "./components/display/Portfolio";
 import Services from "./components/display/Services";
 import Extras from "./components/display/Extras";
 
+import styled from "styled-components";
+
+const AppWrapper = styled.div`
+  text-align: center;
+  font-family: "Eurostile";
+  font-size: 5vh;
+  background-color: rgb(244, 248, 255);
+  cursor: crosshair;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 35% 35% 10%;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  padding: 0vh;
+  color: rgb(192, 192, 192);
+
+  &:focus {
+    outline: none;
+  }
+`;
+
 class App extends React.Component {
   state = {
     h1: new Audio(a01),
@@ -180,12 +202,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="AppX" onKeyDown={this.keypressApp}>
+      <AppWrapper className="AppX" onKeyDown={this.keypressApp}>
         <Header />
         <NavBar changeDisplay={this.changeDisplay} />
         <Content displaySwitch={this.displaySwitch} />
         <Footer />
-      </div>
+      </AppWrapper>
     );
   }
 }
