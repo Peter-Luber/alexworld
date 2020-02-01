@@ -180,12 +180,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
-        autoFocus={true}
-        tabIndex="1"
-        className="AppX"
-        onKeyDown={this.keypressApp}
-      >
+      <div className="AppX" onKeyDown={this.keypressApp}>
         <Header />
         <NavBar changeDisplay={this.changeDisplay} />
         <Content displaySwitch={this.displaySwitch} />
