@@ -1,9 +1,9 @@
 import React from "react";
 
 class Extras extends React.Component {
-  render(props) {
+  render() {
     return (
-      <div className="Extras">
+      <div id="Extras" className="page">
         <h2 tabIndex="0">more stuff</h2>
       </div>
     );

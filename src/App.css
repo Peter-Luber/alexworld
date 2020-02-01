@@ -23,163 +23,6 @@ a:focus {
   filter: blur(0.2vh);
 }
 
-button {
-  background-color: rgb(255, 255, 255);
-  text-indent: 0;
-  font-family: "Eurostile";
-  font-size: 3vh;
-  color: rgba(209, 209, 209, 0.808);
-  background-color: rgb(239, 246, 255);
-  border-style: none;
-  width: 100%;
-  outline: none;
-  cursor: crosshair;
-  overflow: visible;
-}
-
-button:hover,
-button:active,
-button:focus {
-  color: rgb(224, 224, 224);
-  z-index: 1;
-  filter: blur(0.2vh);
-}
-
-.AppX {
-  text-align: center;
-  font-family: "Eurostile";
-  font-size: 5vh;
-  background-color: rgb(244, 248, 255);
-  cursor: crosshair;
-  display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 20% 35% 35% 10%;
-  justify-content: space-around;
-  width: 100%;
-  height: 100%;
-  padding: 0vh;
-  color: rgb(192, 192, 192);
-}
-
-.AppX:focus {
-  outline: none;
-}
-
-.App-header {
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  font-size: 3.5vh;
-  font-family: "EurostileBlack";
-  color: rgba(206, 206, 206, 0.555);
-  border-radius: 15vh;
-  line-height: 50%;
-  display: flex;
-}
-
-.hBox {
-  margin: auto;
-  text-align: left;
-  outline: none;
-}
-
-.hBox:hover,
-.hBox:active,
-.hBox:focus {
-  color: rgba(212, 212, 212, 0.363);
-  filter: blur(0.2vh);
-}
-
-#NavBar {
-  grid-column: 1/1;
-  grid-row: 2/4;
-  filter: drop-shadow(0vh 0vh 3vh #d4d4d47a);
-  background-color: rgb(239, 246, 255);
-  margin-left: 2vh;
-}
-
-#leftBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-.Home {
-  font-size: 4vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.Contact {
-  font-size: 4vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.Services {
-  font-size: 4vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.Extras {
-  font-size: 4vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.Portfolio {
-  font-size: 4vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-#Content {
-  grid-area: 2 / 2 / 4 / 6;
-  background-color: rgb(239, 246, 255);
-  font-size: 10vh;
-  text-align: center;
-  filter: drop-shadow(0vh 0vh 3vh #d4d4d47a);
-  margin-left: 2vh;
-}
-
-#contentBox {
-  width: 100%;
-  height: 100%;
-}
-
-#contentBox:active,
-#contentBox:focus {
-  filter: blur(0.2vh);
-  color: rgba(221, 221, 221, 0.808);
-  outline: none;
-}
-
 h2:hover,
 h2:focus,
 h3:hover,
@@ -189,11 +32,12 @@ h3:focus {
   outline: none;
 }
 
-#foot {
-  grid-area: 4 / 3 / 4 / 4;
-  color: rgba(214, 214, 214, 0.705);
-  font-size: 1.9vh;
-  text-align: left;
-  text-align: center;
+.page {
+  font-size: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 100%;
 }
