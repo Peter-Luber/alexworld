@@ -18,7 +18,7 @@ function NavBar(props) {
   `;
 
   const LeftBox = styled.div`
-    display: ${props.menuState};
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -29,7 +29,8 @@ function NavBar(props) {
     filter: drop-shadow(0vh 0vh 3vh #d4d4d47a);
     background-color: rgb(239, 246, 255);
     @media (max-width: 768px) {
-      width: 90%
+      width: 90%;
+      display: ${props.menuState};
     }
   `;
 

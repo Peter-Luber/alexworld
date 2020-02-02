@@ -3,12 +3,15 @@ import styled from "styled-components";
 import BurgerSrc from "../../img/burger.svg";
 
 const BurgerBox = styled.div`
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 10vh;
   background-color: rgba(235, 235, 235, 0);
+  @media (max-width: 768px) {
+    display: flex;
+  }
 `;
 
 const BurgerImg = styled.img`

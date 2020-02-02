@@ -4,7 +4,7 @@ import styled from "styled-components";
 const CustomButton = styled.button`
   text-indent: 0;
   font-family: "Eurostile";
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: rgba(209, 209, 209, 0.808);
   background-color: rgba(239, 246, 255, 0);
   border-style: none;
