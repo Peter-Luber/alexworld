@@ -21,7 +21,7 @@ const HeaderWrapper = styled.div`
   margin-left: 4vh;
   width: 100%;
   height: 100%;
-  font-size: 3.5vh;
+  font-size: 1.2rem;
   font-family: "EurostileBlack";
   color: rgba(206, 206, 206, 0.555);
   line-height: 50%;
@@ -29,7 +29,7 @@ const HeaderWrapper = styled.div`
   grid-area: 1/1/2/2;
   @media (max-width: 768px) {
     grid-area: 1/2/2/4;
-    font-size: 2.5vh;
+    font-size: 0.9rem;
   }
 `;
 

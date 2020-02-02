@@ -5,13 +5,15 @@ import Burger from "../display/Burger";
 
 function NavBar(props) {
   const NavBarWrapper = styled.div`
-    grid-area: 2 / 1 / 3 / 1;
+    grid-area: 2 / 1 / 4 / 1;
+    margin: auto;
     margin-top: 0px;
-    padding: 2vh;
     z-index: 3;
-    width: 100%;
+    width: 120%;
+    height: 70%;
+    background-color: rgba(100, 100, 100, 0);
     @media (max-width: 768px) {
-      grid-area: 1 / 4 / 2 / 5;
+      grid-area: 1 / 4 / 3 / 5;
     }
   `;
 
@@ -20,14 +22,14 @@ function NavBar(props) {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 12rem;
-    width: 8rem;
-    margin: auto;
+    height: 70%;
+    width: 70%;
     padding-left: 0px;
+    margin: auto;
     filter: drop-shadow(0vh 0vh 3vh #d4d4d47a);
     background-color: rgb(239, 246, 255);
     @media (max-width: 768px) {
-      
+      width: 90%
     }
   `;
 
