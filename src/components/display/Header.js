@@ -5,6 +5,9 @@ const HBox = styled.div`
   margin: auto;
   text-align: left;
   outline: none;
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
 
   &:hover,
   &:active,
@@ -18,14 +21,16 @@ const HeaderWrapper = styled.div`
   margin: auto;
   width: 100%;
   height: 100%;
-  grid-column: 1/2;
-  grid-row: 1/2;
   font-size: 3.5vh;
   font-family: "EurostileBlack";
   color: rgba(206, 206, 206, 0.555);
-  border-radius: 15vh;
   line-height: 50%;
   display: flex;
+  grid-area: 1/1/2/2;
+  @media (max-width: 768px) {
+    grid-area: 1/2/2/4;
+    font-size: 2.5vh;
+  }
 `;
 
 class Header extends React.Component {

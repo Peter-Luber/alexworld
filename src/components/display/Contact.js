@@ -5,7 +5,8 @@ class Contact extends React.Component {
     return (
       <div id="Contact" className="page">
         <h2 tabIndex="0">
-          <a href="mailto:alexthompson2446@gmail.com">send me an email</a>
+          send me an <br></br>
+          <a href="mailto:alexthompson2446@gmail.com">email</a>
         </h2>
       </div>
     );

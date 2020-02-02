@@ -2,12 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const CustomButton = styled.button`
-  background-color: rgb(255, 255, 255);
   text-indent: 0;
   font-family: "Eurostile";
   font-size: 3vh;
   color: rgba(209, 209, 209, 0.808);
-  background-color: rgb(239, 246, 255);
+  background-color: rgba(239, 246, 255, 0);
   border-style: none;
   width: 100%;
   outline: none;

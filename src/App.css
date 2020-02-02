@@ -11,7 +11,7 @@
 }
 
 a {
-  color: rgba(183, 184, 183, 0.808);
+  color: rgba(183, 184, 183, 0.473);
   cursor: crosshair;
 }
 
@@ -28,7 +28,7 @@ h2:focus,
 h3:hover,
 h3:focus {
   filter: blur(0.2vh);
-  color: rgba(221, 221, 221, 0.808);
+  color: rgba(235, 235, 235, 0.808);
   outline: none;
 }
 
@@ -40,4 +40,5 @@ h3:focus {
   align-items: center;
   width: 100%;
   height: 100%;
+  color: rgba(177, 177, 177, 0.26)
 }

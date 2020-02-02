@@ -47,12 +47,12 @@ import Extras from "./components/display/Extras";
 import styled from "styled-components";
 
 const AppWrapper = styled.div`
+  display: grid;
   text-align: center;
   font-family: "Eurostile";
   font-size: 5vh;
   background-color: rgb(244, 248, 255);
   cursor: crosshair;
-  display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 20% 35% 35% 10%;
   justify-content: space-around;
@@ -101,7 +101,8 @@ class App extends React.Component {
     h31: new Audio(a31),
     h32: new Audio(a32),
     h33: new Audio(a33),
-    page: "home"
+    page: "home",
+    menu: "clos"
   };
 
   keypressApp = event => {
@@ -177,7 +178,7 @@ class App extends React.Component {
   displaySwitch = () => {
     switch (this.state.page) {
       case "home":
-        console.log(this);
+        console.log(`Rendering Home component inside Content component`);
         return <Home changeDisplay={this.changeDisplay} />;
       case "contact":
         console.log(`Rendering Contact component inside Content component`);
@@ -200,11 +201,30 @@ class App extends React.Component {
     });
   };
 
+  openMenu = () => {
+    switch (this.state.menu) {
+      case "clos":
+        console.log("closing menu");
+        return "hidden";
+      case "open":
+        return "flex";
+      default:
+        console.log("FUCK! State is shidded.");
+    }
+  };
+
+  setMenu = menuState => {
+    console.log(`${menuState}ing the menu`);
+    this.setState({
+      menu: menuState
+    });
+  };
+
   render() {
     return (
       <AppWrapper className="AppX" onKeyDown={this.keypressApp}>
         <Header />
-        <NavBar changeDisplay={this.changeDisplay} />
+        <NavBar changeDisplay={this.changeDisplay} openMenu={this.openMenu} setMenu={this.setMenu} />
         <Content displaySwitch={this.displaySwitch} />
         <Footer />
       </AppWrapper>
