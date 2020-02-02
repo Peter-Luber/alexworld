@@ -10,6 +10,13 @@
   src: url("./fonts/EurostileExtendedBlack.ttf") format("truetype");
 }
 
+@media (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 0.8rem;
+  }
+}
+
 a {
   color: rgba(183, 184, 183, 0.473);
   cursor: crosshair;
@@ -23,6 +30,10 @@ a:focus {
   filter: blur(0.2vh);
 }
 
+h2 {
+  font-family: "EurostileBlack";
+}
+
 h2:hover,
 h2:focus,
 h3:hover,
@@ -33,12 +44,13 @@ h3:focus {
 }
 
 .page {
-  font-size: 4vh;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 100%;
-  color: rgba(177, 177, 177, 0.26)
+  color: rgba(0, 0, 0, 0.158);
+  padding-left: 2rem;
 }

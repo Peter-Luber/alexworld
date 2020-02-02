@@ -4,11 +4,10 @@ import styled from "styled-components";
 const ContentWrapper = styled.div`
   grid-area: 2 / 2 / 4 / 6;
   background-color: rgb(239, 246, 255);
-  font-size: 10vh;
   text-align: center;
   filter: drop-shadow(0vh 0vh 3vh #d4d4d47a);
   margin-left: 2vh;
-  margin-right: 15vh;
+  margin-right: 10vh;
   @media (max-width: 768px) {
     grid-area: 2 / 1 / 4 / 7;
     margin-left: 3vh;

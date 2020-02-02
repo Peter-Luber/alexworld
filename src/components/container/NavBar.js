@@ -20,11 +20,15 @@ function NavBar(props) {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: 12rem;
+    width: 8rem;
     margin: auto;
+    padding-left: 0px;
     filter: drop-shadow(0vh 0vh 3vh #d4d4d47a);
-    background-color: rgba(233, 240, 250, 0);
+    background-color: rgb(239, 246, 255);
+    @media (max-width: 768px) {
+      
+    }
   `;
 
   return (

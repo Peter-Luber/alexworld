@@ -10,11 +10,16 @@ const BurgerBox = styled.div`
   width: 100%;
   height: 10vh;
   background-color: rgba(235, 235, 235, 0);
+  @media (max-width: 768px) {
+      justify-content: flex-end;
+  }
 `;
 
 const BurgerImg = styled.img`
   opacity: 20%;
   outline: none;
+  width: 2rem;
+  height: 2rem;
 
   &:hover,
   &:active,
@@ -30,8 +35,6 @@ class Burger extends React.Component {
         <BurgerImg
           src={BurgerSrc}
           alt="burger"
-          width="50vh"
-          height="50vh"
           tabIndex="0"
           onClick={() => this.props.toggleMenu()}
         />
