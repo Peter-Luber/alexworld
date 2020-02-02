@@ -4,6 +4,7 @@ import BurgerSrc from "../../img/burger.svg";
 
 const BurgerBox = styled.div`
   display: flex;
+  margin-right: 0px;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -13,6 +14,13 @@ const BurgerBox = styled.div`
 
 const BurgerImg = styled.img`
   opacity: 20%;
+  outline: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    filter: blur(0.2vh);
+  }
 `;
 
 class Burger extends React.Component {
@@ -24,12 +32,12 @@ class Burger extends React.Component {
           alt="burger"
           width="50vh"
           height="50vh"
-          setMenu={this.props.setMenu}
-          onClick={console.log('sup')}
+          tabIndex="0"
+          onClick={() => this.props.toggleMenu()}
         />
       </BurgerBox>
     );
   }
 }
 
-export default Burger 
+export default Burger;

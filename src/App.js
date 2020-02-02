@@ -102,7 +102,7 @@ class App extends React.Component {
     h32: new Audio(a32),
     h33: new Audio(a33),
     page: "home",
-    menu: "clos"
+    menu: "none"
   };
 
   keypressApp = event => {
@@ -201,30 +201,42 @@ class App extends React.Component {
     });
   };
 
-  openMenu = () => {
+  toggleMenu = () => {
     switch (this.state.menu) {
-      case "clos":
-        console.log("closing menu");
-        return "hidden";
-      case "open":
+      case "none":
+        console.log("opening menu");
+        this.setState({
+          menu: "flex"
+        });
         return "flex";
+      case "flex":
+        console.log("closing menu");
+        this.setState({
+          menu: "none"
+        });
+        return "none";
       default:
         console.log("FUCK! State is shidded.");
     }
   };
 
-  setMenu = menuState => {
+  /* setMenu = menuState => {
     console.log(`${menuState}ing the menu`);
     this.setState({
       menu: menuState
     });
-  };
+  }; */
 
   render() {
     return (
       <AppWrapper className="AppX" onKeyDown={this.keypressApp}>
         <Header />
-        <NavBar changeDisplay={this.changeDisplay} openMenu={this.openMenu} setMenu={this.setMenu} />
+        <NavBar
+          changeDisplay={this.changeDisplay}
+          toggleMenu={this.toggleMenu}
+          setMenu={this.setMenu}
+          menuState={this.state.menu}
+        />
         <Content displaySwitch={this.displaySwitch} />
         <Footer />
       </AppWrapper>

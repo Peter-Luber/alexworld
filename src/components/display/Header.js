@@ -18,7 +18,7 @@ const HBox = styled.div`
 `;
 
 const HeaderWrapper = styled.div`
-  margin: auto;
+  margin-left: 4vh;
   width: 100%;
   height: 100%;
   font-size: 3.5vh;
