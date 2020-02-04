@@ -212,7 +212,7 @@ class App extends React.Component {
         });
         return "flex";
       case "flex":
-        console.log(this.props);
+        console.log("closing menu");
         this.setState({
           menu: "none",
           height: "40px"
