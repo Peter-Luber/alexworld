@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FootWrapper = styled.div`
-  grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 5 / 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
