@@ -50,7 +50,7 @@ const AppWrapper = styled.div`
   display: grid;
   text-align: center;
   font-family: "Eurostile";
-  font-size: 5rem;
+  font-size: 0.75rem;
   background-color: rgb(244, 248, 255);
   cursor: crosshair;
   grid-template-columns: 20% 20% 20% 20% 20%;
@@ -58,7 +58,7 @@ const AppWrapper = styled.div`
   justify-content: space-around;
   width: 100%;
   height: 100%;
-  padding: 0rem;
+  padding: 0px;
   color: rgb(192, 192, 192);
 
   &:focus {

@@ -11,11 +11,6 @@ const HeaderWrapper = styled.div`
   color: rgba(206, 206, 206, 0.555);
   line-height: 10px;
   grid-area: 1 / 1 / 2 / 2;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-    margin-left: 48px;
-  }
 `;
 
 const HBox = styled.div`

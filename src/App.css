@@ -10,22 +10,6 @@
   src: url("./fonts/EurostileExtendedBlack.ttf") format("truetype");
 }
 
-@media (max-width: 768px) {
-  h2,
-  h3 {
-    font-size: 0.75rem;
-    width: 250px;
-  }
-}
-
-@media (max-height: 420px) and (max-width: 830px) {
-  h2,
-  h3 {
-    font-size: 0.75rem;
-    width: 250px;
-  }
-}
-
 a {
   color: rgba(0, 0, 0, 0.473);
   cursor: crosshair;
@@ -43,6 +27,8 @@ a:focus {
 h2,
 h3 {
   transition: 1s;
+  font-size: 0.75rem;
+  width: 250px;
 }
 
 h2:hover,

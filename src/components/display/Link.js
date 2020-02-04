@@ -21,9 +21,6 @@ const CustomButton = styled.button`
     z-index: 1;
     filter: blur(0.2rem);
   }
-
-  @media (min-width: 1920px) {
-    font-size: 1.5rem;
 `;
 
 class Link extends React.Component {

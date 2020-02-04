@@ -40,14 +40,14 @@ const ContentWrapper = styled.div`
     margin: auto;
     margin-top: 112px;
     width: 90%;
-    height: 50%;
+    height: 70%;
   }
 
   @media (max-width: 425px) {
     margin: auto;
     margin-top: 112px;
     width: 90%;
-    height: 50%;
+    height: 70%;
   }
 
   @media (max-height: 400px) and (max-width: 830px) {
