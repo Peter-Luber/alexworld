@@ -12,14 +12,18 @@ const CustomButton = styled.button`
   outline: none;
   cursor: crosshair;
   overflow: visible;
+  transition: 1s;
 
   &:hover,
   &:active,
   &:focus {
     color: rgb(224, 224, 224);
     z-index: 1;
-    filter: blur(0.2vh);
+    filter: blur(0.2rem);
   }
+
+  @media (min-width: 1920px) {
+    font-size: 1.5rem;
 `;
 
 class Link extends React.Component {

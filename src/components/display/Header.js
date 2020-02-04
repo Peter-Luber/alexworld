@@ -1,10 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 
+const HeaderWrapper = styled.div`
+  display: flex;
+  margin-left: 48px;
+  margin-top: 30px;
+  width: 100px;
+  font-size: 0.9rem;
+  font-family: "EurostileBlack";
+  color: rgba(206, 206, 206, 0.555);
+  line-height: 10px;
+  grid-area: 1 / 1 / 2 / 2;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    margin-left: 48px;
+  }
+`;
+
 const HBox = styled.div`
-  margin: auto;
   text-align: left;
   outline: none;
+  transition: 1s;
+
   @media (max-width: 768px) {
     margin-left: 0px;
   }
@@ -13,23 +31,7 @@ const HBox = styled.div`
   &:active,
   &:focus {
     color: rgba(212, 212, 212, 0.363);
-    filter: blur(0.2vh);
-  }
-`;
-
-const HeaderWrapper = styled.div`
-  margin-left: 4vh;
-  width: 100%;
-  height: 100%;
-  font-size: 1.2rem;
-  font-family: "EurostileBlack";
-  color: rgba(206, 206, 206, 0.555);
-  line-height: 50%;
-  display: flex;
-  grid-area: 1/1/2/2;
-  @media (max-width: 768px) {
-    grid-area: 1/2/2/4;
-    font-size: 0.9rem;
+    filter: blur(0.2rem);
   }
 `;
 

@@ -5,32 +5,53 @@ import Burger from "../display/Burger";
 
 function NavBar(props) {
   const NavBarWrapper = styled.div`
-    grid-area: 2 / 1 / 4 / 1;
-    margin: auto;
-    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-area: 1 / 1 / 3 / 1;
+    align-items: start;
+    background-color: rgba(100, 100, 100, 0.02);
+    border-radius: 12px;
     z-index: 3;
-    width: 120%;
-    height: 70%;
-    background-color: rgba(100, 100, 100, 0);
+    padding: 5px;
+    height: 200px;
+
+    @media (min-width: 768px) {
+      margin-top: 112px;
+      margin-left: 32px;
+      height: 200px;
+      width: 130px;
+    }
+
     @media (max-width: 768px) {
-      grid-area: 1 / 4 / 3 / 5;
+      grid-area: 1 / 4 / 1 / 6;
+      justify-content: space-around;
+      align-items: center;
+      margin: auto;
+      margin-top: 40px;
+      width: 130px;
+      height: 40px;
+      height: ${props.height};
     }
   `;
 
   const LeftBox = styled.div`
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 70%;
-    width: 70%;
-    padding-left: 0px;
-    margin: auto;
-    filter: drop-shadow(0vh 0vh 3vh #d4d4d47a);
-    background-color: rgb(239, 246, 255);
+    filter: drop-shadow(0rem 0rem 3rem #d4d4d47a);
+    background-color: rgba(239, 246, 255, 0.8);
+    border-radius: 12px;
+
+    @media (min-width: 768px) {
+      width: 130px;
+      height: 200px;
+    }
+
     @media (max-width: 768px) {
-      width: 90%;
       display: ${props.menuState};
+      width: 120px;
+      height: 200px;
     }
   `;
 

@@ -7,8 +7,9 @@ const BurgerBox = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 10vh;
+  height: 20px;
   background-color: rgba(235, 235, 235, 0);
+
   @media (max-width: 768px) {
     display: flex;
   }
@@ -17,13 +18,13 @@ const BurgerBox = styled.div`
 const BurgerImg = styled.img`
   opacity: 20%;
   outline: none;
-  width: 2rem;
-  height: 2rem;
+  width: 48px;
+  height: 48px;
 
   &:hover,
   &:active,
   &:focus {
-    filter: blur(0.2vh);
+    filter: blur(0.2rem);
   }
 `;
 

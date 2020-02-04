@@ -50,7 +50,7 @@ const AppWrapper = styled.div`
   display: grid;
   text-align: center;
   font-family: "Eurostile";
-  font-size: 5vh;
+  font-size: 5rem;
   background-color: rgb(244, 248, 255);
   cursor: crosshair;
   grid-template-columns: 20% 20% 20% 20% 20%;
@@ -58,7 +58,7 @@ const AppWrapper = styled.div`
   justify-content: space-around;
   width: 100%;
   height: 100%;
-  padding: 0vh;
+  padding: 0rem;
   color: rgb(192, 192, 192);
 
   &:focus {
@@ -102,7 +102,8 @@ class App extends React.Component {
     h32: new Audio(a32),
     h33: new Audio(a33),
     page: "home",
-    menu: "none"
+    menu: "none",
+    height: "40"
   };
 
   keypressApp = event => {
@@ -206,26 +207,21 @@ class App extends React.Component {
       case "none":
         console.log("opening menu");
         this.setState({
-          menu: "flex"
+          menu: "flex",
+          height: "258px"
         });
         return "flex";
       case "flex":
-        console.log("closing menu");
+        console.log(this.props);
         this.setState({
-          menu: "none"
+          menu: "none",
+          height: "40px"
         });
         return "none";
       default:
         console.log("FUCK! State is shidded.");
     }
   };
-
-  /* setMenu = menuState => {
-    console.log(`${menuState}ing the menu`);
-    this.setState({
-      menu: menuState
-    });
-  }; */
 
   render() {
     return (
@@ -236,6 +232,7 @@ class App extends React.Component {
           toggleMenu={this.toggleMenu}
           setMenu={this.setMenu}
           menuState={this.state.menu}
+          height={this.state.height}
         />
         <Content displaySwitch={this.displaySwitch} />
         <Footer />
