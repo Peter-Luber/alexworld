@@ -51,7 +51,7 @@ const AppWrapper = styled.div`
   text-align: center;
   font-family: "Eurostile";
   font-size: 0.75rem;
-  background-color: rgb(244, 248, 255);
+  background-color: rgba(250, 250, 250, 0);
   cursor: crosshair;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 20% 35% 35% 10%;
@@ -60,6 +60,7 @@ const AppWrapper = styled.div`
   height: 100%;
   padding: 0px;
   color: rgb(192, 192, 192);
+  z-index: 0;
 
   &:focus {
     outline: none;
@@ -208,7 +209,7 @@ class App extends React.Component {
         console.log("opening menu");
         this.setState({
           menu: "flex",
-          height: "258px"
+          height: "260px"
         });
         return "flex";
       case "flex":

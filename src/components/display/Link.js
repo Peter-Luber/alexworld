@@ -13,12 +13,13 @@ const CustomButton = styled.button`
   cursor: crosshair;
   overflow: visible;
   transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  position: relative;
 
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     color: rgb(224, 224, 224);
-    z-index: 1;
     filter: blur(0.2rem);
   }
 `;

@@ -6,13 +6,20 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  filter: drop-shadow(0rem 0rem 3rem #d4d4d47a);
-  background-color: rgb(239, 246, 255);
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
   border-radius: 12px;
+  border-width: 5px;
+  border-color: rgba(250, 250, 250, 1);
+  border-style: solid;
   margin-top: 112px;
   margin-left: 200px;
   margin-right: 0px;
   height: 70%;
+  box-shadow: 0rem 0rem 10rem #e5e5e5;
+  z-index: 5;
+  overflow: visible;
 
   @media (min-width: 768px) {
     width: 74%;
@@ -31,13 +38,11 @@ const ContentBox = styled.div`
   padding: 5%;
   font-size: 0.75rem;
   width: 280px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0);
   margin: auto;
-
-  &:focus,
-  &:active {
-    filter: blur(0.2rem);
-    color: rgba(240, 240, 240, 0.808);
-    outline: none;
+  outline: none;
+  z-index: 5;
   }
 `;
 

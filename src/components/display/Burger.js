@@ -16,15 +16,18 @@ const BurgerBox = styled.div`
 `;
 
 const BurgerImg = styled.img`
-  opacity: 20%;
   outline: none;
   width: 48px;
   height: 48px;
+  position: fixed;
+  filter: invert(83%) sepia(5%) saturate(18%) hue-rotate(314deg) brightness(104%)
+    contrast(97%);
 
   &:hover,
   &:active,
   &:focus {
-    filter: blur(0.2rem);
+    filter: blur(0.05rem) invert(83%) sepia(5%) saturate(18%) hue-rotate(314deg)
+      brightness(104%) contrast(97%);
   }
 `;
 

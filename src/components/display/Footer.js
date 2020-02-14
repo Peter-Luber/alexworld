@@ -6,25 +6,25 @@ const FootWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  font-size: 1rem;
-  color: rgba(214, 214, 214, 0.705);
+  font-size: 0.7rem;
+  color: rgba(214, 214, 214, 1);
+  z-index: 3;
 `;
 
 const FootText = styled.p`
   z-index: 10;
-  color: black;
-  background-color: lightgrey;
+  color: rgb(220, 220, 220);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   text-align: right;
-  width: 210px;
+  width: 150px;
   padding: 5px;
-  opacity: 13%;
-  margin-left: -130px;
+  margin-left: -95px;
   transition: 1s;
-  filter: drop-shadow(0px 10px 10px #757575);
+  filter: drop-shadow(0px 6px 6px #F0F0F0);
 
   &:hover {
-    margin-left: 0px;
+    margin-left: -10px;
   }
 `;
 
