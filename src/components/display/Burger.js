@@ -19,7 +19,7 @@ const BurgerImg = styled.img`
   outline: none;
   width: 48px;
   height: 48px;
-  position: fixed;
+  position: relative;
   transition: 1s;
   -webkit-transition: 1s;
   -moz-transition: 1s;
