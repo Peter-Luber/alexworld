@@ -24,7 +24,7 @@ const HBox = styled.div`
   transition: 1s;
   -webkit-transition: 1s;
   -moz-transition: 1s;
-  z-index: 6;
+  z-index: 9;
   overflow: visible;
   padding: 0.2rem;
 

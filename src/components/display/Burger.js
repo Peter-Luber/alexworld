@@ -20,6 +20,9 @@ const BurgerImg = styled.img`
   width: 48px;
   height: 48px;
   position: fixed;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
   filter: invert(83%) sepia(5%) saturate(18%) hue-rotate(314deg) brightness(104%)
     contrast(97%);
 
