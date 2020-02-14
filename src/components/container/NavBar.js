@@ -26,13 +26,13 @@ function NavBar(props) {
 
     @media (max-width: 768px) {
       grid-area: 1 / 3 / 1 / 6;
-      justify-content: space-around;
+      justify-content: flex-start;
       align-items: center;
       margin: auto;
-      margin-top: 40px;
+      margin-top: 45px;
       margin-right: 11.5%;
       width: 140px;
-      height: 58px;
+      height: 48px;
       height: ${props.height};
     }
   `;
