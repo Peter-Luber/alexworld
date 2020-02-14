@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const FootWrapper = styled.div`
   grid-area: 1 / 1 / 5 / 2;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   font-size: 0.7rem;
