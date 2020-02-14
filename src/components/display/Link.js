@@ -16,6 +16,7 @@ const CustomButton = styled.button`
   -webkit-transition: 1s;
   -moz-transition: 1s;
   position: relative;
+  z-index: 10;
 
   &:hover,
   &:active {

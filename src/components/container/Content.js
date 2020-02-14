@@ -15,20 +15,31 @@ const ContentWrapper = styled.div`
   border-style: solid;
   margin-top: 112px;
   margin-left: 200px;
-  margin-right: 0px;
-  height: 70%;
+  margin-right: 4.4%;
   box-shadow: 0rem 0rem 10rem #e5e5e5;
   z-index: 5;
   overflow: visible;
 
-  @media (min-width: 768px) {
-    width: 74%;
+  @media (min-width: 768px) and (max-height: 644px) {
+    height: 448px;
+  }
+
+  @media (min-width: 768px) and (min-height: 644px) {
+    margin-bottom: 10px;
   }
 
   @media (max-width: 768px) {
     margin: auto;
     margin-top: 112px;
     width: 90%;
+  }
+
+  @media (max-width: 768px) and (max-height: 400px) {
+    height: 228px;
+  }
+
+  @media (max-width: 768px) and (min-height: 400px) {
+    margin-bottom: 10px;
   }
 `;
 
@@ -42,7 +53,11 @@ const ContentBox = styled.div`
   background-color: rgba(255, 255, 255, 0);
   margin: auto;
   outline: none;
+  overflow: hidden;
   z-index: 5;
+
+  @media (max-width: 350px) {
+    width: 90%;
   }
 `;
 
@@ -50,7 +65,7 @@ class Content extends React.Component {
   render() {
     return (
       <ContentWrapper id="Content">
-        <ContentBox id="contentBox" tabIndex="0">
+        <ContentBox id="contentBox" tabIndex="0" autofocus="true">
           {this.props.displaySwitch()}
         </ContentBox>
       </ContentWrapper>

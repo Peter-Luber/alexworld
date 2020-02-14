@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
   display: flex;
-  margin-left: 48px;
+  margin-left: 47px;
   margin-top: 30px;
   width: 100px;
   font-size: 0.9rem;
@@ -12,6 +12,10 @@ const HeaderWrapper = styled.div`
   color: rgba(206, 206, 206, 0.555);
   line-height: 10px;
   grid-area: 1 / 1 / 2 / 2;
+
+  @media (max-width: 768px) {
+    margin-left: 30%;
+  }
 `;
 
 const HBox = styled.div`

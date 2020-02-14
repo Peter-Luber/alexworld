@@ -17,6 +17,7 @@ a {
   -moz-transition: 1s;
   transition: 1s;
   outline: none;
+  text-decoration: none;
 }
 
 a:hover,
@@ -55,4 +56,11 @@ h3:active {
   height: 100%;
   color: rgba(220, 220, 220, 1);
   filter: none;
+}
+
+@media (max-width: 350px) {
+  .page {
+    width: 90%;
+    margin: auto;
+  }
 }

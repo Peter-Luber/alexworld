@@ -5,14 +5,22 @@ const FootWrapper = styled.div`
   grid-area: 1 / 1 / 5 / 2;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   font-size: 0.7rem;
   color: rgba(214, 214, 214, 1);
-  z-index: 3;
+  background-color: rgba(255, 255, 255, 0);
+  height: 100vh;
+  z-index: 8;
+
+  @media (max-width: 768px) {
+    grid-area: 1/ 1 / 6 / 2;
+    justify-content: flex-end;
+  }
 `;
 
 const FootText = styled.p`
-  z-index: 10;
+  z-index: 8;
+  position: sticky;
   color: rgb(220, 220, 220);
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
@@ -20,7 +28,10 @@ const FootText = styled.p`
   width: 150px;
   padding: 5px;
   margin-left: -95px;
+  margin-top: 350px;
   transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
   filter: drop-shadow(0px 6px 6px #F0F0F0);
 
   &:hover {

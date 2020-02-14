@@ -7,32 +7,32 @@ function NavBar(props) {
   const NavBarWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     grid-area: 1 / 1 / 3 / 1;
-    align-items: start;
+    align-items: center;
     background-color: rgba(250, 250, 250, 1);
     border-radius: 12px;
-    padding: 5px;
-    height: 200px;
+    height: 210px;
     position: relative;
-    z-index: 6;
+    z-index: 10;
+    box-shadow: 0rem 0rem 10rem #e5e5e5;
 
     @media (min-width: 768px) {
       margin-top: 112px;
       margin-left: 32px;
-      height: 200px;
-      width: 130px;
+      height: 210px;
+      width: 140px;
     }
 
     @media (max-width: 768px) {
-      grid-area: 1 / 4 / 1 / 6;
+      grid-area: 1 / 3 / 1 / 6;
       justify-content: space-around;
       align-items: center;
       margin: auto;
       margin-top: 40px;
-      padding: 0px;
-      width: 145px;
-      height: 40px;
+      margin-right: 11.5%;
+      width: 140px;
+      height: 58px;
       height: ${props.height};
     }
   `;
@@ -43,17 +43,12 @@ function NavBar(props) {
     align-items: center;
     background-color: white;
     border-radius: 12px;
-    z-index: 6;
-
-    @media (min-width: 768px) {
-      width: 130px;
-      height: 200px;
-    }
+    z-index: 10;
+    width: 130px;
+    height: 200px;
 
     @media (max-width: 768px) {
       display: ${props.menuState};
-      width: 130px;
-      height: 200px;
     }
   `;
 
