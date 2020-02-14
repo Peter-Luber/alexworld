@@ -2,24 +2,26 @@ import React from "react";
 import styled from "styled-components";
 
 const CustomButton = styled.button`
-  background-color: rgb(255, 255, 255);
   text-indent: 0;
   font-family: "Eurostile";
-  font-size: 3vh;
+  font-size: 0.8rem;
   color: rgba(209, 209, 209, 0.808);
-  background-color: rgb(239, 246, 255);
+  background-color: rgba(239, 246, 255, 0);
   border-style: none;
   width: 100%;
   outline: none;
   cursor: crosshair;
   overflow: visible;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  position: relative;
+  z-index: 10;
 
   &:hover,
-  &:active,
-  &:focus {
+  &:active {
     color: rgb(224, 224, 224);
-    z-index: 1;
-    filter: blur(0.2vh);
+    filter: blur(0.2rem);
   }
 `;
 

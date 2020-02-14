@@ -47,19 +47,20 @@ import Extras from "./components/display/Extras";
 import styled from "styled-components";
 
 const AppWrapper = styled.div`
+  display: grid;
   text-align: center;
   font-family: "Eurostile";
-  font-size: 5vh;
-  background-color: rgb(244, 248, 255);
+  font-size: 0.75rem;
+  background-color: rgba(250, 250, 250, 0);
   cursor: crosshair;
-  display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 20% 35% 35% 10%;
   justify-content: space-around;
   width: 100%;
   height: 100%;
-  padding: 0vh;
+  padding: 0px;
   color: rgb(192, 192, 192);
+  z-index: 0;
 
   &:focus {
     outline: none;
@@ -101,7 +102,9 @@ class App extends React.Component {
     h31: new Audio(a31),
     h32: new Audio(a32),
     h33: new Audio(a33),
-    page: "home"
+    page: "home",
+    menu: "none",
+    height: "40"
   };
 
   keypressApp = event => {
@@ -177,7 +180,7 @@ class App extends React.Component {
   displaySwitch = () => {
     switch (this.state.page) {
       case "home":
-        console.log(this);
+        console.log(`Rendering Home component inside Content component`);
         return <Home changeDisplay={this.changeDisplay} />;
       case "contact":
         console.log(`Rendering Contact component inside Content component`);
@@ -200,11 +203,38 @@ class App extends React.Component {
     });
   };
 
+  toggleMenu = () => {
+    switch (this.state.menu) {
+      case "none":
+        console.log("opening menu");
+        this.setState({
+          menu: "flex",
+          height: "270px"
+        });
+        return "flex";
+      case "flex":
+        console.log("closing menu");
+        this.setState({
+          menu: "none",
+          height: "58px"
+        });
+        return "none";
+      default:
+        console.log("FUCK! State is shidded.");
+    }
+  };
+
   render() {
     return (
       <AppWrapper className="AppX" onKeyDown={this.keypressApp}>
         <Header />
-        <NavBar changeDisplay={this.changeDisplay} />
+        <NavBar
+          changeDisplay={this.changeDisplay}
+          toggleMenu={this.toggleMenu}
+          setMenu={this.setMenu}
+          menuState={this.state.menu}
+          height={this.state.height}
+        />
         <Content displaySwitch={this.displaySwitch} />
         <Footer />
       </AppWrapper>

@@ -1,31 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 
+const HeaderWrapper = styled.div`
+  display: flex;
+  margin-left: 47px;
+  margin-top: 30px;
+  width: 100px;
+  font-size: 0.9rem;
+  font-family: "EurostileBlack";
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(206, 206, 206, 0.555);
+  line-height: 10px;
+  grid-area: 1 / 1 / 2 / 2;
+
+  @media (max-width: 768px) {
+    margin-left: 30%;
+  }
+`;
+
 const HBox = styled.div`
-  margin: auto;
   text-align: left;
   outline: none;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  z-index: 6;
+  overflow: visible;
+  padding: 0.2rem;
+
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
 
   &:hover,
   &:active,
   &:focus {
-    color: rgba(212, 212, 212, 0.363);
-    filter: blur(0.2vh);
+    color: rgba(212, 212, 212, 1);
+    filter: blur(0.15rem);
   }
-`;
-
-const HeaderWrapper = styled.div`
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  font-size: 3.5vh;
-  font-family: "EurostileBlack";
-  color: rgba(206, 206, 206, 0.555);
-  border-radius: 15vh;
-  line-height: 50%;
-  display: flex;
 `;
 
 class Header extends React.Component {
