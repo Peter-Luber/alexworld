@@ -209,14 +209,14 @@ class App extends React.Component {
         console.log("opening menu");
         this.setState({
           menu: "flex",
-          height: "270px"
+          height: "253px"
         });
         return "flex";
       case "flex":
         console.log("closing menu");
         this.setState({
           menu: "none",
-          height: "58px"
+          height: "48px"
         });
         return "none";
       default:
