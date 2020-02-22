@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
   display: flex;
-  margin-left: 47px;
+  margin-left: 46px;
   margin-top: 30px;
   width: 100px;
   font-size: 0.9rem;
