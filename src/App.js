@@ -103,8 +103,8 @@ class App extends React.Component {
     h32: new Audio(a32),
     h33: new Audio(a33),
     page: "home",
-    menu: "none",
-    height: "40"
+    menu: "0px",
+    height: "48px"
   };
 
   keypressApp = event => {
@@ -205,20 +205,20 @@ class App extends React.Component {
 
   toggleMenu = () => {
     switch (this.state.menu) {
-      case "none":
+      case "0px":
         console.log("opening menu");
         this.setState({
-          menu: "flex",
+          menu: "200px",
           height: "253px"
         });
-        return "flex";
-      case "flex":
+        return "200px";
+      case "200px":
         console.log("closing menu");
         this.setState({
-          menu: "none",
+          menu: "0px",
           height: "48px"
         });
-        return "none";
+        return "0px";
       default:
         console.log("FUCK! State is shidded.");
     }

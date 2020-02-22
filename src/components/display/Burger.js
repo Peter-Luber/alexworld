@@ -15,23 +15,31 @@ const BurgerBox = styled.div`
   }
 `;
 
-const BurgerImg = styled.img`
+const BurgerImg = styled.div`
   outline: none;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
   position: relative;
-  transition: 1s;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  filter: invert(83%) sepia(5%) saturate(18%) hue-rotate(314deg)
-    brightness(104%) contrast(97%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
 
   &:hover,
   &:active,
   &:focus {
-    filter: invert(83%) sepia(5%) saturate(18%) hue-rotate(314deg)
-      brightness(114%) contrast(97%);
+    filter: brightness(104%);
   }
+`;
+
+const BurgerHam = styled.div`
+  height: 3px;
+  width: 33px;
+  background-color: #e9e9e9;
+  border-radius: 1.5px;
 `;
 
 class Burger extends React.Component {
@@ -39,11 +47,14 @@ class Burger extends React.Component {
     return (
       <BurgerBox>
         <BurgerImg
-          src={BurgerSrc}
           alt="burger"
           tabIndex="0"
           onClick={() => this.props.toggleMenu()}
-        />
+        >
+          <BurgerHam />
+          <BurgerHam />
+          <BurgerHam />
+        </BurgerImg>
       </BurgerBox>
     );
   }
