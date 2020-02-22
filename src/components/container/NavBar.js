@@ -19,7 +19,7 @@ function NavBar(props) {
 
     @media (min-width: 768px) {
       margin-top: 112px;
-      margin-left: 32px;
+      margin-left: 34px;
       height: 210px;
       width: 140px;
     }

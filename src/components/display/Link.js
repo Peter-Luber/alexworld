@@ -19,7 +19,8 @@ const CustomButton = styled.button`
   z-index: 10;
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     color: rgb(224, 224, 224);
     filter: blur(0.2rem);
   }
