@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
   display: flex;
-  margin-left: 46px;
-  margin-top: 30px;
+  margin-left: 50px;
+  margin-top: 5px;
   width: 100px;
   font-size: 0.9rem;
   font-family: "EurostileBlack";
@@ -13,7 +13,7 @@ const HeaderWrapper = styled.div`
   line-height: 10px;
   grid-area: 1 / 1 / 2 / 2;
 
-  @media (max-width: 768px) {
+  @media (max-width: 830px) {
     margin-left: 30%;
   }
 `;
@@ -28,7 +28,7 @@ const HBox = styled.div`
   overflow: visible;
   padding: 0.2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 830px) {
     margin-left: 0px;
   }
 

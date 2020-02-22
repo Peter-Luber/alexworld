@@ -10,7 +10,7 @@ const BurgerBox = styled.div`
   height: 48px;
   background-color: rgba(235, 235, 235, 0);
 
-  @media (max-width: 768px) {
+  @media (max-width: 830px) {
     display: flex;
   }
 `;

@@ -226,7 +226,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <AppWrapper className="AppX" onKeyDown={this.keypressApp}>
+      <AppWrapper className="AppX" onKeyDown={this.keypressApp} tabIndex="0">
         <Header />
         <NavBar
           changeDisplay={this.changeDisplay}
