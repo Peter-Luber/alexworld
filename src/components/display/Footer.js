@@ -12,7 +12,7 @@ const FootWrapper = styled.div`
   height: 100vh;
   z-index: 8;
 
-  @media (max-width: 768px) {
+  @media (max-width: 830px) {
     grid-area: 1/ 1 / 6 / 2;
     justify-content: flex-end;
   }

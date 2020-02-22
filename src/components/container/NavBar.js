@@ -17,19 +17,19 @@ function NavBar(props) {
     z-index: 10;
     box-shadow: 0rem 0rem 10rem #e5e5e5;
 
-    @media (min-width: 768px) {
-      margin-top: 112px;
-      margin-left: 34px;
+    @media (min-width: 830px) {
+      margin-top: 87px;
+      margin-left: 36px;
       height: 210px;
       width: 140px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 830px) {
       grid-area: 1 / 3 / 1 / 6;
       justify-content: flex-start;
       align-items: center;
       margin: auto;
-      margin-top: 45px;
+      margin-top: 20px;
       margin-right: 11.5%;
       width: 140px;
       height: 48px;
@@ -47,7 +47,7 @@ function NavBar(props) {
     width: 130px;
     height: 200px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 830px) {
       display: ${props.menuState};
     }
   `;

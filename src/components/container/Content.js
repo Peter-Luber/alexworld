@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const ContentWrapper = styled.div`
-  grid-area: 1 / 1 / 4 / 6;
+  grid-area: 1 / 1 / 5 / 6;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -13,33 +13,31 @@ const ContentWrapper = styled.div`
   border-width: 5px;
   border-color: rgba(250, 250, 250, 1);
   border-style: solid;
-  margin-top: 112px;
+  margin-top: 87px;
   margin-left: 200px;
   margin-right: 4.4%;
   box-shadow: 0rem 0rem 10rem #e5e5e5;
   z-index: 5;
   overflow: visible;
 
-  @media (min-width: 768px) and (max-height: 644px) {
-    height: 448px;
+  @media (min-width: 830px) and (max-height: 644px) {
+    height: 482px;
   }
 
-  @media (min-width: 768px) and (min-height: 644px) {
-    margin-bottom: 10px;
+  @media (min-width: 830px) and (min-height: 644px) {
+    margin-bottom: 5%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 830px) {
     margin: auto;
-    margin-top: 112px;
+    margin-top: 87px;
     width: 90%;
+    margin-bottom: 5%;
   }
 
-  @media (max-width: 768px) and (max-height: 400px) {
-    height: 228px;
-  }
-
-  @media (max-width: 768px) and (min-height: 400px) {
-    margin-bottom: 10px;
+  @media (max-width: 830px) and (max-height: 300px) {
+    height: 175px;
+    font-size: 0.75rem;
   }
 `;
 
@@ -47,7 +45,6 @@ const ContentBox = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5%;
-  font-size: 0.75rem;
   width: 280px;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0);
