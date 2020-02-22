@@ -46,9 +46,11 @@ function NavBar(props) {
     z-index: 10;
     width: 130px;
     height: 200px;
+    overflow: hidden;
 
     @media (max-width: 830px) {
-      display: ${props.menuState};
+      display: flex;
+      height: ${props.menuState};
     }
   `;
 

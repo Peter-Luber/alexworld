@@ -36,7 +36,7 @@ const HBox = styled.div`
   &:active,
   &:focus {
     color: rgba(212, 212, 212, 1);
-    filter: blur(0.15rem);
+    filter: brightness(120%);
   }
 `;
 
