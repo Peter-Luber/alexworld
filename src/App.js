@@ -103,7 +103,7 @@ class App extends React.Component {
     h32: new Audio(a32),
     h33: new Audio(a33),
     page: "home",
-    menu: "0px",
+    menu: "none",
     height: "48px"
   };
 
@@ -205,20 +205,20 @@ class App extends React.Component {
 
   toggleMenu = () => {
     switch (this.state.menu) {
-      case "0px":
+      case "none":
         console.log("opening menu");
         this.setState({
-          menu: "200px",
+          menu: "flex",
           height: "253px"
         });
-        return "200px";
-      case "200px":
+        return "flex";
+      case "flex":
         console.log("closing menu");
         this.setState({
-          menu: "0px",
+          menu: "none",
           height: "48px"
         });
-        return "0px";
+        return "none";
       default:
         console.log("FUCK! State is shidded.");
     }

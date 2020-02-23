@@ -34,13 +34,8 @@ function NavBar(props) {
       margin-right: 11.5%;
       width: 140px;
       height: 48px;
-      /* height: {props.height}; */
+      height: ${props.height};
       overflow: hidden;
-
-      &:focus,
-      &:hover {
-        height: 253px;
-      }
     }
   `;
 
@@ -59,9 +54,7 @@ function NavBar(props) {
     margin: auto;
 
     @media (max-width: 830px) {
-      display: flex;
-      height: 200px;
-      /* height: ${props.menuState}; */
+      display: ${props.menuState};
     }
   `;
 
