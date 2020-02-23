@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import BurgerSrc from "../../img/burger.svg";
 
 const BurgerBox = styled.div`
   display: none;
   justify-content: center;
   align-items: center;
-  width: 48px;
+  width: 100%;
   height: 48px;
   background-color: rgba(235, 235, 235, 0);
+
+  &:hover,
+  &:active,
+  &:focus {
+    filter: brightness(104%);
+  }
 
   @media (max-width: 830px) {
     display: flex;
@@ -28,12 +33,6 @@ const BurgerImg = styled.div`
   justify-content: space-evenly;
   align-items: center;
   margin: auto;
-
-  &:hover,
-  &:active,
-  &:focus {
-    filter: brightness(104%);
-  }
 `;
 
 const BurgerHam = styled.div`
