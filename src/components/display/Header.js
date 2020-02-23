@@ -32,11 +32,8 @@ const HBox = styled.div`
     margin-left: 0px;
   }
 
-  &:hover,
-  &:active,
-  &:focus {
-    color: rgba(212, 212, 212, 1);
-    filter: brightness(120%);
+  &:hover {
+    color: rgba(254, 254, 254, 1);
   }
 `;
 
