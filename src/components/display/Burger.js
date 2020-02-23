@@ -12,6 +12,7 @@ const BurgerBox = styled.div`
 
   @media (max-width: 830px) {
     display: flex;
+    margin: auto;
   }
 `;
 

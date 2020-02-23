@@ -26,6 +26,7 @@ function NavBar(props) {
 
     @media (max-width: 830px) {
       grid-area: 1 / 3 / 1 / 6;
+      display: inline-block;
       justify-content: flex-start;
       align-items: center;
       margin: auto;
@@ -33,7 +34,13 @@ function NavBar(props) {
       margin-right: 11.5%;
       width: 140px;
       height: 48px;
-      height: ${props.height};
+      overflow: hidden;
+
+      &:active,
+      &:focus,
+      &:hover {
+        height: 253px;
+      }
     }
   `;
 
@@ -43,14 +50,17 @@ function NavBar(props) {
     align-items: center;
     background-color: white;
     border-radius: 12px;
+    border-width: 5px;
+    border-color: rgba(250, 250, 250, 1);
     z-index: 10;
     width: 130px;
     height: 200px;
     overflow: hidden;
+    margin: auto;
 
     @media (max-width: 830px) {
       display: flex;
-      height: ${props.menuState};
+      height: 200px;
     }
   `;
 
