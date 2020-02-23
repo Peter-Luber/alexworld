@@ -34,9 +34,9 @@ function NavBar(props) {
       margin-right: 11.5%;
       width: 140px;
       height: 48px;
+      /* height: {props.height}; */
       overflow: hidden;
 
-      &:active,
       &:focus,
       &:hover {
         height: 253px;
@@ -61,6 +61,7 @@ function NavBar(props) {
     @media (max-width: 830px) {
       display: flex;
       height: 200px;
+      /* height: ${props.menuState}; */
     }
   `;
 
