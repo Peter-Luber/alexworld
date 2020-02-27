@@ -37,7 +37,7 @@ import a33 from "./128k/33.mp3";
 import NavBar from "./components/container/NavBar";
 import Content from "./components/container/Content";
 import Header from "./components/display/Header";
-import Footer from "./components/display/Footer";
+import Crescent from "./components/display/Crescent";
 import Home from "./components/display/Home";
 import Contact from "./components/display/Contact";
 import Portfolio from "./components/display/Portfolio";
@@ -105,6 +105,11 @@ class App extends React.Component {
     page: "home",
     menu: "none",
     height: "48px"
+  };
+
+  moonPress = () => {
+    console.log("moon");
+    return "";
   };
 
   keypressApp = event => {
@@ -228,6 +233,7 @@ class App extends React.Component {
     return (
       <AppWrapper className="AppX" onKeyDown={this.keypressApp} tabIndex="0">
         <Header />
+        <Crescent moonPress={this.moonPress} />
         <NavBar
           changeDisplay={this.changeDisplay}
           toggleMenu={this.toggleMenu}
@@ -236,7 +242,6 @@ class App extends React.Component {
           height={this.state.height}
         />
         <Content displaySwitch={this.displaySwitch} />
-        <Footer />
       </AppWrapper>
     );
   }

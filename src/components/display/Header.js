@@ -3,9 +3,11 @@ import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
   display: flex;
+  position: static;
   margin-left: 50px;
   margin-top: 5px;
   width: 100px;
+  height: 80px;
   font-size: 0.9rem;
   font-family: "EurostileBlack";
   background-color: rgba(255, 255, 255, 0);
@@ -27,10 +29,6 @@ const HBox = styled.div`
   z-index: 9;
   overflow: visible;
   padding: 0.2rem;
-
-  @media (max-width: 830px) {
-    margin-left: 0px;
-  }
 
   &:hover {
     color: rgba(254, 254, 254, 1);

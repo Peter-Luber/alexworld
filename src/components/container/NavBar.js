@@ -14,14 +14,15 @@ function NavBar(props) {
     border-radius: 12px;
     height: 210px;
     position: relative;
-    z-index: 10;
     box-shadow: 0rem 0rem 10rem #e5e5e5;
+    z-index: 10;
 
     @media (min-width: 830px) {
       margin-top: 87px;
       margin-left: 36px;
       height: 210px;
       width: 140px;
+      z-index: 10;
     }
 
     @media (max-width: 830px) {
