@@ -204,7 +204,9 @@ class App extends React.Component {
   changeDisplay = newDisplay => {
     console.log(`Changing page state value to ${newDisplay}`);
     this.setState({
-      page: newDisplay
+      page: newDisplay,
+      menu: "none",
+      height: "48px"
     });
   };
 
@@ -237,7 +239,6 @@ class App extends React.Component {
         <NavBar
           changeDisplay={this.changeDisplay}
           toggleMenu={this.toggleMenu}
-          setMenu={this.setMenu}
           menuState={this.state.menu}
           height={this.state.height}
         />
