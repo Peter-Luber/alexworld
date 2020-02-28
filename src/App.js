@@ -37,7 +37,6 @@ import a33 from "./128k/33.mp3";
 import NavBar from "./components/container/NavBar";
 import Content from "./components/container/Content";
 import Header from "./components/display/Header";
-import Crescent from "./components/display/Crescent";
 import Home from "./components/display/Home";
 import Contact from "./components/display/Contact";
 import Portfolio from "./components/display/Portfolio";
@@ -216,7 +215,7 @@ class App extends React.Component {
         console.log("opening menu");
         this.setState({
           menu: "flex",
-          height: "253px"
+          height: "300px"
         });
         return "flex";
       case "flex":
@@ -235,12 +234,12 @@ class App extends React.Component {
     return (
       <AppWrapper className="AppX" onKeyDown={this.keypressApp} tabIndex="0">
         <Header />
-        <Crescent moonPress={this.moonPress} />
         <NavBar
           changeDisplay={this.changeDisplay}
           toggleMenu={this.toggleMenu}
           menuState={this.state.menu}
           height={this.state.height}
+          moonPress={this.moonPress}
         />
         <Content displaySwitch={this.displaySwitch} />
       </AppWrapper>

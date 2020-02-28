@@ -49,7 +49,7 @@ class Burger extends React.Component {
         <BurgerImg
           alt="burger"
           tabIndex="0"
-          onClick={() => this.props.toggleMenu()}
+          onFocus={() => this.props.toggleMenu()}
         >
           <BurgerHam />
           <BurgerHam />
