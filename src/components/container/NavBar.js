@@ -1,32 +1,34 @@
 import React from "react";
-import Link from "../display/Link";
 import styled from "styled-components";
+import Link from "../display/Link";
 import Burger from "../display/Burger";
+import Crescent from "../display/Crescent";
 
 function NavBar(props) {
   const NavBarWrapper = styled.div`
+    grid-area: 1 / 1 / 3 / 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    grid-area: 1 / 1 / 3 / 1;
+    justify-content: flex-start;
     align-items: center;
     background-color: rgba(250, 250, 250, 1);
     border-radius: 12px;
-    height: 210px;
+
     position: relative;
-    z-index: 10;
     box-shadow: 0rem 0rem 10rem #e5e5e5;
+    z-index: 10;
 
     @media (min-width: 830px) {
       margin-top: 87px;
       margin-left: 36px;
-      height: 210px;
+      height: 260px;
       width: 140px;
+      z-index: 10;
     }
 
     @media (max-width: 830px) {
       grid-area: 1 / 3 / 1 / 6;
-      display: inline-block;
+      display: flex;
       justify-content: flex-start;
       align-items: center;
       margin: auto;
@@ -58,6 +60,8 @@ function NavBar(props) {
     }
   `;
 
+  console.log(props.menuState);
+
   return (
     <NavBarWrapper id="NavBar">
       <Burger toggleMenu={props.toggleMenu} />
@@ -68,6 +72,7 @@ function NavBar(props) {
         <Link changeDisplay={props.changeDisplay} linkName="contact" />
         <Link changeDisplay={props.changeDisplay} linkName="extras" />
       </LeftBox>
+      <Crescent moonPress={props.moonPress} menuState={props.menuState} />
     </NavBarWrapper>
   );
 }

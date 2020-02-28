@@ -45,6 +45,10 @@ h3:active {
   color: rgba(235, 235, 235, 1);
 }
 
+p {
+  margin: auto;
+}
+
 .page {
   font-size: 0.75rem;
   font-family: Arial, Helvetica, sans-serif;

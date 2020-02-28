@@ -37,7 +37,6 @@ import a33 from "./128k/33.mp3";
 import NavBar from "./components/container/NavBar";
 import Content from "./components/container/Content";
 import Header from "./components/display/Header";
-import Footer from "./components/display/Footer";
 import Home from "./components/display/Home";
 import Contact from "./components/display/Contact";
 import Portfolio from "./components/display/Portfolio";
@@ -105,6 +104,11 @@ class App extends React.Component {
     page: "home",
     menu: "none",
     height: "48px"
+  };
+
+  moonPress = () => {
+    console.log("moon");
+    return "";
   };
 
   keypressApp = event => {
@@ -199,7 +203,9 @@ class App extends React.Component {
   changeDisplay = newDisplay => {
     console.log(`Changing page state value to ${newDisplay}`);
     this.setState({
-      page: newDisplay
+      page: newDisplay,
+      menu: "none",
+      height: "48px"
     });
   };
 
@@ -209,7 +215,7 @@ class App extends React.Component {
         console.log("opening menu");
         this.setState({
           menu: "flex",
-          height: "253px"
+          height: "300px"
         });
         return "flex";
       case "flex":
@@ -231,12 +237,11 @@ class App extends React.Component {
         <NavBar
           changeDisplay={this.changeDisplay}
           toggleMenu={this.toggleMenu}
-          setMenu={this.setMenu}
           menuState={this.state.menu}
           height={this.state.height}
+          moonPress={this.moonPress}
         />
         <Content displaySwitch={this.displaySwitch} />
-        <Footer />
       </AppWrapper>
     );
   }

@@ -5,7 +5,7 @@ const BurgerBox = styled.div`
   display: none;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 40px;
   height: 48px;
   background-color: rgba(235, 235, 235, 0);
 
@@ -49,7 +49,7 @@ class Burger extends React.Component {
         <BurgerImg
           alt="burger"
           tabIndex="0"
-          onClick={() => this.props.toggleMenu()}
+          onFocus={() => this.props.toggleMenu()}
         >
           <BurgerHam />
           <BurgerHam />
